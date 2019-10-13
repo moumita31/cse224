@@ -1,0 +1,11 @@
+
+.backButton {
+    background-color: rgb(24, 10, 233);
+    color: white;
+    padding: 12px 12px;
+    margin: 6px 6px;
+}
+
+.backButton:hover {
+  background-color: rgb(15, 12, 65);
+}

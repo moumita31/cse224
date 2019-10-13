@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Portfolio</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="style1.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+     
+    </div>
+  </nav>
+
+
+
+
+  <div id="login_div" class="main-div">
+    <h3>Login to your Account here!</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+ 
+
+
+    <button onclick="login()">Login to Account</button>
+	<p></p>
+	<p align="center">or</p>
+	<a class="d-block text-center mt-2 small" href="signup.html">Back</a>
+
+
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+   
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	 <h3>Welcome User!!!</h3>
+	 <p></p>
+	<p></p>
+	<p></p>
+	 <a href="./contact1.html"><button class="button button4">Your Comment</button></a>
+    <p></p>
+	
+	 <button onclick="logout()">Logout</button>
+	
+	
+	
+    
+  </div>
+ <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAATm2RPM3DyniLNxmEEHDjlrRiWpzW444",
+    authDomain: "portfolio-47e46.firebaseapp.com",
+    databaseURL: "https://portfolio-47e46.firebaseio.com",
+    projectId: "portfolio-47e46",
+    storageBucket: "portfolio-47e46.appspot.com",
+    messagingSenderId: "736482575256",
+    appId: "1:736482575256:web:77e83913ff3fe124faa1ed",
+    measurementId: "G-Q653FBRPZM"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  //make auth and firestore references
+  const auth =firebase.auth();
+  const db = firebase.firestore();
+  //update firestore settings
+  db.settings({timestampsInSnapshots: true});
+</script>
+   
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+	 <script src="js/login.js"></script>
+
+  </body>
+
+  </html>
